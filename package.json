@@ -1,0 +1,17 @@
+{
+  "name": "health-exercise",
+  "version": "1.0.0",
+  "description": "Ejercicios para la salud",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "exercise",
+    "npm",
+    "health",
+    "android"
+  ],
+  "author": "Yelena Islen San Juan <yelena@citmatel.inf.cu>",
+  "license": "MIT"
+}

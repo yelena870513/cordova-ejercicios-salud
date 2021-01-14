@@ -1,0 +1,22 @@
+
+
+<section class="about article" id="content" go-result to-top>
+
+    <div class="container text-center">
+        <h2 class="titulo">
+            {{current.title}}
+        </h2>
+
+        <!-- El tap de los moviles se genera con el evento click -->
+        <div class="bus" ng-show="movil"> <input id="searchT" class="sb-search-input" name="search" type="text"  placeholder="Buscar..." ng-model="criteria" ng-keyup="searchComponent($event,criteria)" ng-click="criteria='';"/>
+            <span class="label-danger tres" ng-show="error">Debe contener al menos tres caracteres.</span></div>
+
+        <p html5lightbox class="content" ng-bind-html="current.content | liteSearch:searchString">
+        </p>
+
+
+    </div>
+
+</section>
+
+<!-- /Content

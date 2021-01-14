@@ -1,0 +1,44 @@
+
+<!-- Portfolio -->
+
+<section class="portfolio" id="portfolio" to-top>
+    <div class="container text-center">
+        <h2>
+            Imagenes
+        </h2>
+    </div>
+
+    <div id="filters-container" class="cbp-l-filters-button" >
+
+        <div ng-repeat="item in menuVideo track by $index"  data-filter= {{item.filter}} class="cbp-filter-item"  ng-class="{'cbp-filter-item-active':$index==0,'cbp-filter-item':$index!=0}">{{item.title}}<div class="cbp-filter-counter"></div></div>
+
+    </div>
+    <div id="grid-container" cubeportfolio data-selected="anatomia" class="cbp-l-grid-projects"  filter="filters-container">
+        <ul>
+
+            <li class="cbp-item {{item.section}}" ng-repeat="item in videos track by $index">
+                <div class="cbp-caption">
+                    <div class="cbp-caption-defaultWrap">
+                        <img class="img-responsive" ng-src="assets/webm/{{item.poster}}" alt="{{item.title}}" ng-if="movil==false" />
+                        <img class="img-responsive" ng-src="file:///android_asset/www/assets/webm/{{item.poster}}" alt="{{item.title}}" ng-if="movil==true"/>
+                    </div>
+                    <div class="cbp-caption-activeWrap">
+                        <div class="cbp-l-caption-alignCenter">
+                            <div class="cbp-l-caption-body">
+                                <a href="assets/webm/{{item.url}}" class="html5lightbox" data-thumbnail="assets/webm/{{item.poster}}" data-group="set1" data-width="800" data-height="600" title="{{item.title}}"data-title=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <center><img ng-src="assets/webm/{{item.poster}}" class="img-responsive">  </center>
+                <!--<div class="cbp-l-grid-projects-title">{{item.title}}</div>-->
+                <!--<div class="cbp-l-grid-projects-desc">Web Design / Graphic</div>-->
+            </li>
+
+        </ul>
+    </div>
+
+
+
+</section>
+<!-- /Portfolio -->

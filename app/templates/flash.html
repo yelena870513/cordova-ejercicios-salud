@@ -1,0 +1,46 @@
+<!-- Videos -->
+
+<section class="portfolio" id="portfolio" to-top>
+    <div class="container text-center">
+        <h2>
+            Videos
+
+        </h2>
+
+    </div>
+
+    <div id="filters-container" class="cbp-l-filters-button" >
+
+        <div ng-repeat="item in menuVideo track by $index"
+             data-filter= {{item.filter}}
+             class="cbp-filter-item"
+             ng-class="{'cbp-filter-item-active':item.filter==chooseVideo}"
+             ng-click="switchTo(item.filter)"
+        >{{item.title}}<div class="cbp-filter-counter">{{[flashes,videos]| counterFilter:item.filter}}</div></div>
+
+    </div>
+    
+    <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:900px;margin:0px auto 98px;">
+ <!--<div class="flashes" id="flashes">-->
+     <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;" 
+           slider-builder
+           data-filter="anatomia"
+             data-type = "swf"
+           data-repeater="{{flashes}}"
+     >
+     <ul class="amazingslider-slides" style="display:none;" >
+         <li ng-repeat="item in flashes track by $index">
+             <a href="{{item.url}}" class="html5lightbox" data-thumbnail="assets/swf/{{item.poster}}" data-group="swf" data-width="800" data-height="600">
+                 <img ng-src="assets/swf/{{item.poster}}"  title="{{item.subtitle}}" data-description="{{item.title}}" class="img-responsive" />
+             </a>
+         </li>
+     </ul>
+         <ul class="amazingslider-thumbnails" style="display:none;">
+             <li  ng-repeat="item in flashes track by $index"><img class="thumbnail" ng-src="assets/swf/{{item.poster}}" alt="{{item.subtitle}}"  title="{{item.subtitle}}" /></li>
+             </ul>
+  </div>
+      </div>
+
+
+</section>
+<!-- /Videos -->

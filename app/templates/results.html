@@ -1,0 +1,40 @@
+
+
+   <section class="about" id="result" >
+    <div class="container text-center">
+      <h2 class="titulo">
+        Resultados de la búsqueda
+      </h2>
+
+      <div class="row-fluid">
+        <div class="col-lg-12">
+          <ul class="results">
+            <li dir-paginate="item in content | searchFor:searchString | itemsPerPage:5 as results" ng-click="goItemPage(item,searchString)">
+              <span>{{item.title}}</span>
+              <p class="searchP" ng-bind-html="item.content | highlights:searchString"></p>
+            </li>
+            <li style="text-align:center;" ng-show="!results">
+              <p class="no-results">No se han encontrado resultados</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row-fluid">
+        <div class="col" style="text-align: center;">
+          <div class="pag-control pagination">
+            <dir-pagination-controls
+                    max-size="5"
+                    direction-links="true"
+
+                    ng-show="results">
+            </dir-pagination-controls>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </section>

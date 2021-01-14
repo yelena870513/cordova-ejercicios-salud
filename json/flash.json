@@ -1,0 +1,62 @@
+{
+  "data":[
+    {
+      "poster":"1.jpg",
+      "url":"1.swf",
+      "subtitle":"Video 1",
+      "title":"Video 1. Ejercicios, flexión del tronco (hasta tocarse la punta de los pies).",
+      "section":"anatomia"
+    },
+    {
+      "poster":"2.jpg",
+      "url":"2.swf",
+      "subtitle":"Video 2",
+      "title":"Video 2. Ejercicios, flexión del tronco desde acostado (sentarse).",
+      "section":"anatomia"
+    },{
+      "poster":"3.jpg",
+      "url":"3.swf",
+      "subtitle":"Video 3",
+      "title":"Video 3. Ejercicios, desde sentado flexión del tronco hasta tocarse la punta de los pies.",
+      "section":"anatomia"
+    },{
+      "poster":"4.jpg",
+      "url":"4.swf",
+      "subtitle":"Video 4",
+      "title":"Video 4. Ejercicios, flexión del tronco con rotaciones laterales.",
+      "section":"anatomia"
+    },{
+      "poster":"5.jpg",
+      "url":"5.swf",
+      "subtitle":"Video 5",
+      "title":"Video 5. Ejercicios, flexión lateral.",
+      "section":"anatomia"
+    },{
+      "poster":"6.jpg",
+      "url":"6.swf",
+      "subtitle":"Video 6",
+      "title":"Video 6. Ejercicios, flexión lateral (desde acostado de lado).",
+      "section":"anatomia"
+    },{
+      "poster":"7.jpg",
+      "url":"7.swf",
+      "subtitle":"Video 7",
+      "title":"Video 7. Ejercicios, extensión.",
+      "section":"anatomia"
+    },{
+      "poster":"8.jpg",
+      "url":"8.swf",
+      "subtitle":"Video 8",
+      "title":"Video 8. Ejercicios, extensión (desde acostado de frente al suelo).",
+      "section":"anatomia"
+    },{
+      "poster":"9.jpg",
+      "url":"9.swf",
+      "subtitle":"Video 9",
+      "title":"Video 9. Ejercicios para fortalecer los músculos del miembro superior.",
+      "section":"anatomia"
+    }
+
+
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "exercises",
+  "description": "Multimedia de Ejercicios para la salud",
+  "main": "index.html",
+  "keywords": [
+    "ejercicios",
+    "salud",
+    "cuerpo",
+    "multimedia"
+  ],
+  "authors": [
+    "Yelena Islen San Juan"
+  ],
+  "license": "MIT",
+  "homepage": "http://citmatel.cu",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-input-masks": "*",
+    "angular-lazy-img": "^1.2.2",
+    "angular-messages": "*",
+    "angular-touch": "1.4.8",
+    "angular-ui-router": "*",
+    "decimal.js": "4.0.2",
+    "angular-translate": "*",
+    "angular-moment": "*",
+    "angulartics": "*",
+    "ngCordova": "^0.1.27-alpha",
+    "ngstorage": "*",
+    "firebase": "*",
+    "lodash": "*",
+    "jquery": "*"
+  }
+}

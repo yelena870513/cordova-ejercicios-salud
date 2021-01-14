@@ -1,0 +1,269 @@
+<!-- Hero -->
+
+<section  id="home">
+    <div id="amazingslider-wrapper-1" class="slider">
+        <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;" amazingslider data-amconf="{{customize}}">
+            <ul class="amazingslider-slides" style="display:none;">
+                <li><img src="img/INICIO2.jpg" />
+                </li>
+                <li><img src="img/INICIOe.jpg" />
+                </li>
+            </ul>
+            <ul class="amazingslider-thumbnails" style="display:none;">
+                <li><img src="img/INICIO2-tn.jpg" /></li>
+                <li><img src="img/INICIOe-tn.jpg" /></li>
+            </ul>
+            <!--<div class="amazingslider-engine"><a href="http://amazingslider.com" title="Responsive JavaScript Slider">Responsive JavaScript Slider</a></div>-->
+        </div>
+    </div>
+
+</section>
+<!-- /Hero -->
+<!-- About -->
+
+<section class="about" id="aboutUs">
+    <div class="container text-center">
+        <h2 class="about">
+          Al lector
+        </h2>
+
+        <p>
+            Esta aplicación que ponemos a su consideración, le propone una serie de ejercicios de rehabilitación que tienen como propósito ayudarlo a restituir, conservar o mejorar la fuerza, elasticidad y coordinación de articulaciones y músculos.
+
+        </p>
+
+        <p>
+            Si ha padecido de lesiones o dolor en articulaciones, cuello, espalda o tobillos, le proponemos adentrarse en este recorrido. La terapia física es un campo de la Salud que permite dar a cada enfermedad o lesión una recuperación más completa e integral.
+        </p>
+    </div>
+</section>
+<!-- /About -->
+<!-- Parallax -->
+
+<div class="block bg-primary block-pd-lg block-bg-overlay text-center" data-bg-img="img/parallax-bg.jpg" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg">
+
+
+</div>
+<!-- /Parallax -->
+<!-- Features -->
+
+<section class="features" id="features">
+    <div class="container">
+        <h2 class="text-center">
+            Ejercicios
+        </h2>
+
+        <div class="row">
+            <div class="feature-col col-lg-4 col-xs-12" ng-repeat="puntero in content">
+                <div class="card card-block text-center">
+                    <div>
+                        <div class="feature-icon">
+                            <a class="ease" href="#/content#{{puntero.url}}" ><img class="imgIco" ng-src="./img/{{puntero.img}}"/></a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3>
+                            {{puntero.subtitle}}
+                        </h3>
+
+                        <p class="text-center"  ng-bind-html="puntero.content | more">
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<!-- /Features -->
+<!-- Call to Action -->
+
+<section class="cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-sm-12 text-lg-left text-center">
+                <h2>
+                    ¿Quiénes somos?
+                </h2>
+
+                <p>
+                    La editorial CITMATEL tiene como objeto la producción y desarrollo de productos multimedia y posee una experiencia de más de 15 años. Nos distingue la edición de materiales de interés en diferentes formatos: multimedia (Windows, Android), ebooks, audiolibros, software educativos y audiovisuales soportados en CD-ROM y DVD.
+                </p>
+            </div>
+
+            <div class="col-lg-3 col-sm-12 text-lg-right text-center">
+                <span class="btn btn-ghost">http://www.editorialcitmatel.com/<span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /Call to Action -->
+<!-- Portfolio -->
+
+<!-- Testimonial Section -->
+<section id="testimonial" class="section team">
+    <div class="container text-center">
+        <h2>
+            Videos
+
+        </h2>
+
+    </div>
+    <div class="row">
+        <div class="col-xs-6">
+            <div id="filters-container" class="cbp-l-filters-button" >
+
+                <div ng-repeat="item in menuVideo track by $index"
+                     data-filter= {{item.filter}}
+                     class="cbp-filter-item"
+                     ng-class="{'cbp-filter-item-active':item.filter==chooseVideo}"
+                     ng-click="UpdateFilter(item.filter)"
+                     choose-render
+                     data-type = "webm"
+                     data-repeater = {{videos}}
+                >{{item.title}}<div class="cbp-filter-counter">{{[flashes,videos]| counterFilter:item.filter}}</div></div>
+
+            </div>
+            <div id="amazingslider-wrapper-123" style="display:block;position:relative;max-width:480px;margin:0px auto 98px;width: 480px">
+                <div id="amazingslider-123" style="display:block;position:relative;margin:0 auto;" >
+                    <ul class="amazingslider-slides" style="display:none;"
+                        data-idp="amazingslider-wrapper-123"
+                        data-slider = "amazingslider-123"
+                        slider-builder
+                        data-filter="{{chooseVideo}}"
+                        data-type = "webm"
+                        data-repeater="{{videos}}"
+                    >
+                        <li  ng-repeat="item in videos | filter:{ section: chooseVideo} track by $index  ">
+                            <a href="{{item.url}}" class="html5lightbox" data-thumbnail="{{item.poster}}" data-group="videos">
+                                <img ng-src="assets/webm/{{item.poster}}" alt="{{item.title}}"  title="{{item.title}}" data-description="{{item.title}}" />
+                            </a>
+
+
+                        </li>
+                    </ul>
+                    <ul class="amazingslider-thumbnails" style="display:none;">
+                        <li  ng-repeat="item in videos | filter:{ section: chooseVideo} track by $index"><img class="thumbnail" ng-src="assets/webm/{{item.poster}}" alt="{{item.title}}"  title="{{item.title}}" /></li>
+                    </ul>
+                </div>
+            </div>
+            <!--<div class="empujador"></div>-->
+        </div>
+    </div>
+</section>
+<!-- Testimonial Section End -->
+
+<!-- /Portfolio -->
+<!-- Team -->
+
+<section class="team" id="team" to-top>
+    <div class="container">
+        <h2 class="text-center">
+            Realizadores
+        </h2>
+
+        <div class="row">
+            <div class="col-sm-3 col-xs-6 cred">
+                <div class="card card-block">
+                    <a href="#"><img alt="" class="team-img" src="img/team-1.jpg">
+                        <div class="card-title-wrap">
+                            <span class="card-title">Yanet Cabargas</span> <span class="card-text">Jefe de Proyecto</span>
+                        </div>
+
+                        <div class="team-over">
+                            <h4 class="hidden-md-down">
+                                Conecta conmigo
+                            </h4>
+
+                            <nav class="social-nav">
+                               <a href="mailto:cabargas@citmatel.inf.cu"><i class="fa fa-envelope"></i></a>
+                            </nav>
+
+                        </div></a>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6 cred">
+                <div class="card card-block">
+                    <a href="#"><img alt="" class="team-img" src="img/team-3.jpg">
+                        <div class="card-title-wrap">
+                            <span class="card-title">Yelena Islen</span> <span class="card-text">Diseño y Programación</span>
+                        </div>
+
+                        <div class="team-over">
+                            <h4 class="hidden-md-down">
+                                Conecta conmigo
+                            </h4>
+
+                            <nav class="social-nav">
+                                <a href="mailto:yelena@citmatel.inf.cu"><i class="fa fa-envelope"></i></a>
+                            </nav>
+
+                        </div></a>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-xs-6 cred">
+                <div class="card card-block">
+                    <a href="#"><img alt="" class="team-img" src="img/team-2.jpg">
+                        <div class="card-title-wrap">
+                            <span class="card-title">Raiko Olivera</span> <span class="card-text">Edición de Imágenes</span>
+                        </div>
+
+                        <div class="team-over">
+                            <h4 class="hidden-md-down">
+                                Conecta conmigo
+                            </h4>
+
+                            <nav class="social-nav">
+                               <a href="mailto:raiko@citmatel.inf.cu"><i class="fa fa-envelope"></i></a>
+                            </nav>
+
+                        </div></a>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-6 cred">
+                <div class="card card-block">
+                    <a href="#"><img alt="" class="team-img" src="img/team-5.jpg">
+                        <div class="card-title-wrap">
+                            <span class="card-title">Javier Agudo</span> <span class="card-text">Edición de Imágenes</span>
+                        </div>
+
+                        <div class="team-over">
+                            <h4 class="hidden-md-down">
+                                Conecta conmigo
+                            </h4>
+
+                            <nav class="social-nav">
+                                <a href="mailto:jagudo@citmatel.inf.cu"><i class="fa fa-envelope"></i></a>
+                            </nav>
+
+                        </div></a>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-xs-6 cred">
+                <div class="card card-block">
+                    <a href="#"><img alt="" class="team-img" src="img/team-4.jpg">
+                        <div class="card-title-wrap">
+                            <span class="card-title">Maylen Gesen</span> <span class="card-text">Control de la Calidad</span>
+                        </div>
+
+                        <div class="team-over">
+                            <h4 class="hidden-md-down">
+                                Conecta conmigo
+                            </h4>
+
+                            <nav class="social-nav">
+                                <a href="mailto:maylen@citmatel.inf.cu"><i class="fa fa-envelope"></i></a>
+                            </nav>
+
+                        </div></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
